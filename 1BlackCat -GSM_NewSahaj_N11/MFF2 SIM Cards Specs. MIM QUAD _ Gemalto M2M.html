@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://developer.gemalto.com/documentation/mff2-sim-cards-specs-mim-quad -->
+<html class="no-js js  wf-inactive" lang="en" dir="ltr"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--[if IE]><![endif]-->
+
+<meta name="viewport" content="initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="https://developer.gemalto.com/sites/all/themes/gemalto/favicon.ico">
+<link rel="shortlink" href="https://developer.gemalto.com/node/288">
+<meta name="description" content="FullM2M Quad Overview The FullM2M Quad is a Machine Identity Module (MIM) specifically designed for M2M applications. The FullM2M Quad MIM combines traditional smart card security with a more rugged form factor, it is designed to avoid usage of a SIM socket (direct soldering on device’s printed circuit board). This MIM has a specific form factor (DFN-8, also called SON-8, and previously called VQFN-8 in some documents) defined as MFF2 in the ETSI M2M UICC standard (TS 102.671).">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://developer.gemalto.com/documentation/mff2-sim-cards-specs-mim-quad">
+    <title>MFF2 SIM Cards Specs. MIM QUAD | Gemalto M2M</title>
+
+    <link rel="stylesheet" href="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/css__IveKIMRkkRBAM7EOozSbQaJm8GbmGu7qO6eZhasNBSk__qD0Qyyc9YgjWAkMeLtNLTW8L1dBUStHvZRcn.css">
+<link rel="stylesheet" href="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/css__EIPQalaYk_1gNmDAaGqYMAaTnk53al2GGfFbbYIIY3c__bewAEOK0Qvj3jCvqAGlnbubNKWHhDZ_bjcE4.css" media="print">
+
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="//developer.gemalto.com/profiles/panopoly/modules/panopoly/panopoly_core/css/panopoly-fonts-ie-open-sans.css?owioqq" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="//developer.gemalto.com/profiles/panopoly/modules/panopoly/panopoly_core/css/panopoly-fonts-ie-open-sans-bold.css?owioqq" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="//developer.gemalto.com/profiles/panopoly/modules/panopoly/panopoly_core/css/panopoly-fonts-ie-open-sans-italic.css?owioqq" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="//developer.gemalto.com/profiles/panopoly/modules/panopoly/panopoly_core/css/panopoly-fonts-ie-open-sans-bold-italic.css?owioqq" />
+<![endif]-->
+<link rel="stylesheet" href="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/css__kTawMGgk4MTFS3ytLiFCAwnkITCMn44Xy6hUVHBktRc__aHMe8KfFlDKEVYJ-SOHo64XNnsnP1iAamGHD.css">
+    <script src="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/cph1jec.js.download" type="text/javascript" async=""></script><script type="text/javascript" src="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/gtm.js.download" async=""></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.type='text/javascript';j.src='//www.googletagmanager.com/gtm.js?id='+i+dl+'';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WG65LC5');</script>
+<script src="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/js__ibssby9gqc46gOOBoHZjS_zjJTRhumWjIsrk2_qay88__Ahl6iHlaXzPM6nlWXodZzqC5XcknVL4q.download"></script>
+<script>(function(){var e={kitId:"cph1jec",scriptTimeout:3e3},t=document.getElementsByTagName("html")[0];t.className+=" wf-loading";var n=setTimeout(function(){t.className=t.className.replace(/(\s|^)wf-loading(\s|$)/g," "),t.className+=" wf-inactive"},e.scriptTimeout),r=document.createElement("script"),i=!1;r.src="//use.typekit.net/"+e.kitId+".js",r.type="text/javascript",r.async="true",r.onload=r.onreadystatechange=function(){var t=this.readyState;if(i||t&&t!="complete"&&t!="loaded")return;i=!0,clearTimeout(n);try{Typekit.load(e)}catch(r){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(r,s)})()</script>
+<script src="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/js__OnsXzllTRsEdFA6HIuAcYTlwSZZUL-GGV-ztuYQlECw__6MxRe83zdrSiFFzWSXju2wSQ9HxIvokA.download"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"gemalto","theme_token":"TQ2quPex0w7s2iulN6bqtRnSj_M9ZSUdstIsPO4ygSY","jquery_version":"1.7","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.tabs.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_admin\/panopoly-admin.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-fonts.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-dropbutton.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_magic\/css\/panopoly-magic.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_magic\/css\/panopoly-modal.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_theme\/css\/panopoly-featured.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_theme\/css\/panopoly-accordian.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_wysiwyg\/panopoly-wysiwyg.css":1,"modules\/poll\/poll.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/video_filter\/video_filter.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"profiles\/panopoly\/modules\/contrib\/views\/css\/views.css":1,"profiles\/panopoly\/modules\/contrib\/caption_filter\/caption-filter.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/modal.css":1,"sites\/all\/modules\/modified\/modal_forms\/css\/modal_forms_popup.css":1,"profiles\/panopoly\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/rate\/rate.css":1,"sites\/all\/libraries\/syntaxhighlighter\/styles\/shCore.css":1,"sites\/all\/libraries\/syntaxhighlighter\/styles\/shThemeDefault.css":1,"sites\/all\/modules\/contrib\/updatescripts\/css\/updatescript.css":1,"sites\/all\/themes\/gemalto\/layouts\/gemalto-3-1\/gemalto-3-1.css":1,"modules\/comment\/comment.css":1,"sites\/all\/themes\/gemalto\/ds_layouts\/gemalto_13\/gemalto_13.css":1,"sites\/all\/modules\/modified\/rate\/templates\/thumbs-up\/thumbs-up.css":1,"sites\/all\/themes\/gemalto\/layouts\/gemalto-default-layout\/gemalto-default-layout.css":1,"sites\/all\/modules\/custom\/gemalto_cookie_policy\/css\/gemalto_cookie_policy.css":1,"profiles\/panopoly\/modules\/contrib\/panels\/plugins\/layouts\/onecol\/onecol.css":1,"sites\/all\/themes\/gemalto\/sass\/stylesheets\/style.css":1,"sites\/all\/themes\/gemalto\/sass\/stylesheets\/styles.css":1,"sites\/all\/themes\/gemalto\/sass\/stylesheets\/print.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-fonts-ie-open-sans.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-fonts-ie-open-sans-bold.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-fonts-ie-open-sans-italic.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_core\/css\/panopoly-fonts-ie-open-sans-bold-italic.css":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_images\/panopoly-images.css":1},"js":{"sites\/all\/modules\/contrib\/syntaxhighlighter\/syntaxhighlighter.min.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_widgets\/jquery-ui-tabs-rotate.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.tabs.min.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.accordion.min.js":1,"misc\/ajax.js":1,"profiles\/panopoly\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/libraries\/syntaxhighlighter\/scripts\/shCore.js":1,"sites\/all\/libraries\/syntaxhighlighter\/scripts\/shBrushJava.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_admin\/panopoly-admin.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_magic\/panopoly-magic.js":1,"profiles\/panopoly\/modules\/panopoly\/panopoly_theme\/js\/panopoly-accordion.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"profiles\/panopoly\/modules\/contrib\/caption_filter\/js\/caption-filter.js":1,"sites\/all\/modules\/modified\/modal_forms\/js\/modal_forms_register.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/modal.js":1,"sites\/all\/modules\/modified\/modal_forms\/js\/modal_forms_popup.js":1,"sites\/all\/modules\/contrib\/rate\/rate.js":1,"sites\/all\/modules\/custom\/gemalto_cookie_policy\/js\/gemalto_cookie_policy.js":1,"sites\/all\/themes\/gemalto\/js\/dropdown_menu.js":1,"sites\/all\/themes\/gemalto\/js\/upload_button.js":1,"sites\/all\/themes\/gemalto\/js\/collapse_ranking.js":1,"sites\/all\/themes\/gemalto\/js\/hide_comment_form.js":1,"sites\/all\/themes\/gemalto\/js\/tags_checkbox_classes.js":1,"sites\/all\/themes\/gemalto\/js\/ctools_modal_fix.js":1,"sites\/all\/themes\/gemalto\/js\/gemalto_scripts.js":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"CToolsModal":{"loadingText":"Loading...","closeText":"Close Window","closeImage":"\u003Cimg src=\u0022https:\/\/developer.gemalto.com\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close window\u0022 title=\u0022Close window\u0022 \/\u003E","throbber":"\u003Cimg src=\u0022https:\/\/developer.gemalto.com\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading\u0022 title=\u0022Loading...\u0022 \/\u003E","modalSize":{"type":"scale","width":".9","height":".9","addWidth":0,"addHeight":0,"contentRight":25,"contentBottom":75},"modalOptions":{"opacity":".55","background-color":"#FFF"},"animationSpeed":"fast","modalTheme":"CToolsModalDialog","throbberTheme":"CToolsModalThrobber"},"modal-popup-small":{"modalSize":{"type":"fixed","width":300,"height":300},"modalOptions":{"opacity":0.6,"background-color":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg src=\u0022https:\/\/developer.gemalto.com\/sites\/all\/modules\/modified\/modal_forms\/images\/loading_animation.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 \/\u003E","closeText":"Close"},"modal-popup-medium":{"modalSize":{"type":"fixed","width":530,"height":450},"modalOptions":{"opacity":0.6,"background-color":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg src=\u0022https:\/\/developer.gemalto.com\/sites\/all\/modules\/modified\/modal_forms\/images\/loading_animation.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 \/\u003E","closeText":"Close"},"modal-popup-large":{"modalSize":{"type":"scale","width":0.8,"height":0.8},"modalOptions":{"opacity":0.6,"background-color":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg src=\u0022https:\/\/developer.gemalto.com\/sites\/all\/modules\/modified\/modal_forms\/images\/loading_animation.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 \/\u003E","closeText":"Close"},"syntaxhighlighter":{"clipboard":"\/sites\/all\/libraries\/syntaxhighlighter\/scripts\/clipboard.swf"},"rate":{"basePath":"\/rate\/vote\/js","destination":"node\/288"},"spotlight_settings":{"rotation_time":4000},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"cookiePolicy":{"message":"Like most websites, we use cookies here, but we don\u0027t share your information.\u003Cbr\/\u003EBy continuing your visit, you accept the use of cookies, \u003Ca href=\u0022https:\/\/developer.gemalto.com\/about-cookies\u0022 target=\u0022_blank\u0022\u003EFind out more\u003C\/a\u003E","uid":0}});</script>
+  </head>
+  <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-288 node-type-documentation region-content">
+    <div id="skip-link">
+      <a href="https://developer.gemalto.com/documentation/mff2-sim-cards-specs-mim-quad#main" class="element-invisible element-focusable" role="link">Skip to main content</a>
+    </div>
+    <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-WG65LC5" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>    <div class="gemalto-default-layout clearfix panel-display" id="main">
+  <div class="gemalto-topbar">
+    <div class="inside"><div class="panel-pane pane-panels-mini pane-top-bar">
+  
+      
+  
+  <div class="pane-content">
+    <div class="panel-display panel-1col clearfix" id="mini-panel-top_bar">
+  <div class="panel-panel panel-col">
+    <div><div class="panel-pane pane-block pane-menu-menu-gemalto-menu">
+  
+      
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="first leaf"><a href="http://gemalto.com/" target="_blank">Gemalto.com</a></li>
+<li class="leaf"><a href="https://www.gemalto.com/m2m" target="_blank">GEMALTO.COM/M2M</a></li>
+<li class="last leaf"><a href="https://developer.gemalto.com/welcome" target="_self">About this community</a></li>
+</ul>  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-custom pane-3 subscribe">
+  
+      
+  
+  <div class="pane-content">
+    <p><a href="https://www.gemalto.com/m2m/newsletters/subscription" target="_blank">Newsletter</a></p>
+  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-block pane-menu-menu-login-menu">
+  
+      
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="first last leaf"><a href="https://developer.gemalto.com/user/login">Log in</a></li>
+</ul>  </div>
+
+  
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+
+  
+  </div>
+</div>
+  </div>
+  
+  <div class="gemalto-header">
+    <div class="inside"><div class="panel-pane pane-gemalto-page-logo pane-page-logo">
+  
+      
+  
+  <div class="pane-content">
+    <a href="https://developer.gemalto.com/" rel="home" id="logo" title="Gemalto M2M"><img src="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/logo.png" alt="Gemalto M2M" title="Gemalto M2M"></a>  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-block pane-system-main-menu" id="main-menu-links">
+  
+      
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="first leaf"><a href="https://developer.gemalto.com/">Home</a></li>
+<li class="leaf"><a href="https://developer.gemalto.com/knowledge-base">Knowledge Base</a></li>
+<li class="last expanded"><a href="https://developer.gemalto.com/forum">Community</a><div class="flyout" style="display: none;"><div class="marker"></div><ul class="menu"><li class="first leaf"><a href="https://developer.gemalto.com/forum">Forum</a></li>
+<li class="last leaf"><a href="https://developer.gemalto.com/ranking">User ranking</a></li>
+</ul></div></li>
+</ul>  </div>
+
+  
+  </div>
+</div>
+  </div>
+
+  <div class="gemalto-content-image">
+    <div class="inside"></div>
+  </div>
+
+  <div class="gemalto-content">
+    <div class="inside"><div class="panel-pane pane-page-breadcrumb">
+  
+      
+  
+  <div class="pane-content">
+    <h2 class="element-invisible">You are here</h2><div class="breadcrumb"><span class="inline odd first"><a href="https://developer.gemalto.com/knowledge-base">Knowledge Base</a></span> <span class="delimiter">&gt;</span> <span class="inline even last">MFF2 SIM Cards Specs. MIM QUAD</span></div>  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-page-content">
+  
+      
+  
+  <div class="pane-content">
+    <div class="panel-display gemalto-3-1 clearfix">
+  <div class="panel-gemalto-3-1-row clearfix">
+    <div class="panel-gemalto-3-1-left"><div class="panel-pane pane-node-title">
+  
+      
+  
+  <div class="pane-content">
+    <h1 class="pane-title">MFF2 SIM Cards Specs. MIM QUAD</h1>
+  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-custom pane-1">
+  
+      
+  
+  <div class="pane-content">
+    <p><span class="content-type">Documentation, </span><span class="created">March 5, 2014 - 11:17pm, </span><span class="views">35889 views</span></p>
+  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-entity-field pane-node-field-kb-tags">
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-kb-tags field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="https://developer.gemalto.com/kb-tags/mim-quad">MIM Quad</a></div></div></div>  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-entity-field pane-node-body">
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><h2>FullM2M Quad Overview</h2>
+<ul>
+<li>The FullM2M Quad is a Machine Identity Module (MIM) specifically designed for M2M applications. The FullM2M Quad MIM combines traditional smart card security with a more rugged form factor, it is designed to avoid usage of a SIM socket (direct soldering on device’s printed circuit board).</li>
+</ul>
+<p>This MIM has a specific form factor (DFN-8, also called SON-8, and previously called VQFN-8 in some documents) defined as MFF2 in the ETSI M2M UICC standard (TS 102.671).</p>
+<ul>
+<li>Packaging --&gt; ETSI MFF2 (also know as DFN8/ SON8 /VQFN-8)</li>
+<li>Operating Temperature --&gt; -40ºC to +105ºc</li>
+<li>Networks compliancy --&gt; 2G/3G/4G</li>
+<li>Supply Voltage --&gt; ISO class A(5V), B(3V) &amp; C (1.8V)</li>
+<li>Communication protocol --&gt; ISO</li>
+<li>OS features --&gt; Javacard ,eXtended-Life , eUICC</li>
+</ul>
+<p></p>
+<pre>  eXtended-Life operating system is a Gemalto’s M2M specific operating system especially designed to maximize the lifespan 
+  of the memory chip, making it more resistant to stress (erase/write cycles) and allowing to have a very high level of 
+  reliability on the field.
+</pre><pre>  eUICC is a new feature being implemented in Gemalto products. eUICC transforms the traditional UICC into a Multiple 
+  Independant Profile Areas UICC (MIPA concept) where different profiles from different MNOs can securely cohabit in the
+  same chip and can remotely be administrated (download, activation, deletion).<br><br></pre><ul>
+<li>Dimensions
+<ul>
+<li>Compliant with ETSI TS 1202.671 MFF2</li>
+</ul>
+</li>
+</ul>
+<pre>&nbsp;</pre><p><img height="476" width="1125" class="media-element file-default" src="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/MFF2_pkg_dimensions.png" alt="MFF2_pkg_dimensions" title="MFF2_pkg_dimensions"></p>
+<ul>
+<li>Pin outline</li>
+</ul>
+<ul>
+<li>Compliant with MFF2 ETSI specs (M2M UICC - TS102.671). Cx is the corresponding contact reference on SIM module as per ETSI TS 102.221.</li>
+</ul>
+<p><img height="185" width="294" class="media-element file-default" src="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/MFF2_pin_out.png" alt="MFF2 PIN_OUT" title="MFF2 PIN_OUT"></p>
+<p>A reference design can be found under the schematics of the concept board</p>
+<p><img height="383" width="585" class="media-element file-default" src="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/MFF2_circuit_example.png" alt="MFF2_circuit_example" title="MFF2_circuit_example"></p>
+</div></div></div>  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-node-info-bar">
+  
+      
+  
+  <div class="pane-content">
+    <div class="rate-widget-1 rate-widget clear-block rate-average rate-widget-thumbs_up rate-9faee7bb1ab5e89f14d4e8ce13f098b2 rate-node-288-1-1 rate-processed" id="rate-node-288-1-1"><a class="rate-button rate-thumbs-up-btn-up" id="rate-button-2" rel="nofollow" href="https://developer.gemalto.com/documentation/mff2-sim-cards-specs-mim-quad?rate=-Nvva9_H05JbCknp19xGtL4z238bzwFL2-ZORTg0GoI" title="Like">Like</a><div class="node-rating-results">10</div></div><div title="Add comment" class="node-comment-count-wrapper node-comment-count-with-label hidden"><a href="https://developer.gemalto.com/user/login?destination=node/288#comment-form" class="node-comment-count-link"><div class="node-comment-count"><div class="node-comment-count-inside">1</div></div><div class="node-comment-count-label">Comment</div></a></div>  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-node-comments">
+  
+      
+  
+  <div class="pane-content">
+    <div class="gemalto-pager clearfix"><div class="gemalto-pager-result-count"></div></div><div id="comment-wrapper-nid-288"><div class="ajax-comment-wrapper" id="comment-wrapper-6200"><a id="comment-6200"></a>
+<div class="comment comment-odd view-mode-full clearfix">
+
+  <!-- Needed to activate contextual links -->
+  
+    <div class="ds-left">
+        <div class="user-picture">
+    <span class="user-picture-wrapper">
+      <img class="gemalto-user-picture" src="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/user.png" width="200" height="200" alt="rmontrose&#39;s picture" title="rmontrose&#39;s picture"><span class="user-rank-1" title="Rookie"></span>    </span>
+  </div>
+<span class="username">rmontrose</span>    </div>
+
+    <div class="ds-right">
+      <div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">Mar 7 2018 - 2:40am</div></div></div><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>It would help if there was a datasheet with soldering instructions and recommended profiles for the eSIM MFF2.</p>
+</div></div></div><div class="user-signature"></div><ul class="links inline"><li class="first"><div class="rate-widget-1 rate-widget clear-block rate-average rate-widget-thumbs_up rate-affd16acca1b9d410a8fb0a05bfc026b rate-comment-6200-1-1 rate-processed" id="rate-comment-6200-1-1"><a class="rate-button rate-thumbs-up-btn-up" id="rate-button-4" rel="nofollow" href="https://developer.gemalto.com/documentation/mff2-sim-cards-specs-mim-quad?rate=FOSipkvrIJerLQYx4W73HWiFYGkX8ZzFjvVE8QQTWk0" title="Like">Like</a><div class="node-rating-results">0</div></div></li>
+<li class="comment_forbidden last"><a href="https://developer.gemalto.com/user/login?destination=node/288%23comment-form">Log in</a> or <a href="https://developer.gemalto.com/modal_forms/nojs/register?destination=node/288%23comment-form" class="init-modal-forms-register-processed ctools-use-modal ctools-modal-modal-popup-medium ctools-use-modal-processed">register</a> to post comments</li>
+</ul>    </div>
+
+</div>
+
+<!-- Needed to activate display suite support on forms -->
+</div><div class="gemalto-pager clearfix"><div class="gemalto-pager-result-count"></div></div></div>  </div>
+
+  
+  </div>
+</div>
+    <div class="panel-gemalto-3-1-right"><div class="panel-pane pane-node-info-bar">
+  
+      
+  
+  <div class="pane-content">
+    <div class="rate-widget-1 rate-widget clear-block rate-average rate-widget-thumbs_up rate-9faee7bb1ab5e89f14d4e8ce13f098b2 rate-node-288-1-1 rate-processed" id="rate-node-288-1-1--2"><a class="rate-button rate-thumbs-up-btn-up" id="rate-button-6" rel="nofollow" href="https://developer.gemalto.com/documentation/mff2-sim-cards-specs-mim-quad?rate=-Nvva9_H05JbCknp19xGtL4z238bzwFL2-ZORTg0GoI" title="Like">Like</a><div class="node-rating-results">10</div></div><div title="Add comment" class="node-comment-count-wrapper"><a href="https://developer.gemalto.com/user/login?destination=node/288#comment-form" class="node-comment-count-link"><div class="node-comment-count"><div class="node-comment-count-inside">1</div></div></a></div>  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-token pane-node-author">
+  
+      
+  
+  <div class="pane-content">
+    Alopez  </div>
+
+  
+  </div>
+</div>
+  </div>
+</div>  </div>
+
+  
+  </div>
+</div>
+  </div>
+
+  <div class="gemalto-footer">
+    <div class="inside"><div class="panel-pane pane-menu-tree pane-menu-footer-menu">
+  
+      
+  
+  <div class="pane-content">
+    <div class="menu-block-wrapper menu-block-ctools-menu-footer-menu-1 menu-name-menu-footer-menu parent-mlid-menu-footer-menu:0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-1397"><a href="https://developer.gemalto.com/contact">Contact</a></li>
+<li class="leaf menu-mlid-5036"><a href="https://developer.gemalto.com/imprint">Imprint</a></li>
+<li class="leaf menu-mlid-1399"><a href="https://developer.gemalto.com/privacy-policy">Privacy policy</a></li>
+<li class="last leaf menu-mlid-1398"><a href="https://developer.gemalto.com/terms-conditions">Terms &amp; Conditions</a></li>
+</ul></div>
+  </div>
+
+  
+  </div>
+
+<div class="panel-pane pane-custom pane-2" id="copyright">
+  
+      
+  
+  <div class="pane-content">
+    <p>© 2006 - 2018 Gemalto</p>
+  </div>
+
+  
+  </div>
+</div>
+  </div>
+</div>
+
+
+
+    <script src="./MFF2 SIM Cards Specs. MIM QUAD _ Gemalto M2M_files/js__X-3o4iM1Vv8SkYJmZi-9fDlQfy-8zqs3Z08LWOctF54__xB3S3MBNZNk0rap-E1PNPtwhI8xCAPGD.download"></script>
+  
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><div id="cookie-policy" style="overflow: hidden; height: 58px; padding: 7px;">Like most websites, we use cookies here, but we don't share your information.<br>By continuing your visit, you accept the use of cookies, <a href="https://developer.gemalto.com/about-cookies" target="_blank">Find out more</a><a class="hide" href="https://developer.gemalto.com/documentation/mff2-sim-cards-specs-mim-quad#">Hide</a></div></body></html>

@@ -1,0 +1,12 @@
+Info: Reading netlist file "C:\POWER_CARD_WEMOS_PROMINI_NEW\POWER CARD.net".
+
+Info: Using references to match components and footprints.
+
+* Warning: component 'R39': board footprint 'Resistors_ThroughHole:Resistor_Horizontal_RM7mm', netlist footprint 'Resistors_SMD:R_1206'
+
+* Warning: component 'R33': board footprint 'Resistors_ThroughHole:Resistor_Horizontal_RM7mm', netlist footprint 'Resistors_SMD:R_1206'
+
+* Warning: component 'R34': board footprint 'Resistors_ThroughHole:Resistor_Horizontal_RM7mm', netlist footprint 'Resistors_SMD:R_1206'
+
+* Warning: component 'Y1': board footprint 'Resonator_16MHz_arduino', netlist footprint 'POWER CARD:Resonator_16MHz_arduino'
+

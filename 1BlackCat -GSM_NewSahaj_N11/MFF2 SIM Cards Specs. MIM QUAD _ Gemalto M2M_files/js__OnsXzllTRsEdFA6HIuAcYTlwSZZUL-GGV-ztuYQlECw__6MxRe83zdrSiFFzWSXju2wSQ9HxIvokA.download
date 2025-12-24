@@ -1,0 +1,158 @@
+(function($) {
+
+  Drupal.behaviors.gemaltoDropdownMenu = {
+    attach: function (context, settings) {
+      $('#main-menu-links li.expanded .menu', context).wrap('<div class="flyout"></div>');
+      var flyout = $('div.flyout', context);
+      flyout.prepend('<div class="marker"></div>');
+      flyout.hide();
+
+      $('#main-menu-links li.expanded', context).hover(
+        function() { $('div.flyout', $(this)).show(); },
+        function() { $('div.flyout',  $(this)).hide(); }
+      );
+
+    }
+  }
+
+})(jQuery);
+
+;/**/
+(function ($) {
+
+  Drupal.behaviors.gemaltoUploadButton = {
+    attach: function (context, settings) {
+
+      var uploadbutton = $('#edit-field-user-picture-und-0-upload-upload');
+      //add wrappers and fakeupload field
+      uploadbutton.addClass('realupload');
+      uploadbutton.wrap('<div class="upload"></div>');
+      uploadbutton.before('<div class="fakeupload"><input type="text" name="fakeupload" /></div>');
+
+      uploadbutton.hover(
+        function(){$(this).siblings().addClass('hover')},
+        function(){$(this).siblings().removeClass('hover')}
+      );
+      uploadbutton.change(function () {
+        // Add the realupload fields value to the fake one
+        $('.fakeupload input').val($(this).val());
+      });
+
+
+    }
+  }
+
+})(jQuery);
+
+;/**/
+(function ($) {
+
+  Drupal.behaviors.gemaltoCollapseRanking = {
+    attach: function (context, settings) {
+      $('.rank-list').hide();
+      // Collapse/expand div with ranking limitations description.
+      $('.rank-collapsible', context).click(function() {
+        $('.rank-list', context).toggle();
+        $(this).toggleClass('expanded');
+        $('.rank-description-pane').toggleClass('expanded');
+      });
+
+    }
+  }
+
+})(jQuery);
+;/**/
+(function ($) {
+
+  Drupal.behaviors.gemaltoHideCommentForm = {
+    attach: function (context, settings) {
+
+      $('.node-comment-count-link, .comment-submit-cancel', context).click(function () {
+
+        $(".pane-node-comment-form .comment-form", context)
+          .toggleClass("hidden")
+          .find('> div')
+          .toggle();
+
+        $(".node-comment-count-with-label", context).toggleClass("hidden");
+
+        var $comment_form = $('.pane-node-comment-form .comment-form', context);
+        var formSize = $comment_form.prop("scrollHeight");
+        var pos = $comment_form.offset();
+
+        // Scroll to comment reply.
+        $('html, body').animate({ scrollTop: pos.top - formSize}, 'slow');
+
+        return false;
+      });
+
+      $(".pane-node-comment-form .comment-form", context)
+        .addClass("hidden")
+        .find('> div')
+        .hide();
+
+      $(".node-comment-count-with-label", context).addClass("hidden");
+
+
+    }
+  }
+
+})(jQuery);
+
+;/**/
+(function ($) {
+
+  Drupal.behaviors.gemaltoTagsCheckboxClasses = {
+    attach: function (context, settings) {
+      $('.bef-checkboxes input[type="checkbox"]', context)
+        .once('bef-checkbox')
+        .change(function () {
+          $(this).parent().toggleClass('checked');
+        })
+        .each(function () {
+          if ($(this).is(':checked')) {
+            $(this).parent().addClass('checked');
+          }
+        });
+    }
+  }
+
+})(jQuery);
+
+;/**/
+(function($) {
+
+  Drupal.behaviors.gemaltoCtoolsModalFix = {
+    attach: function (context, settings) {
+
+      // Make modal window height scaled automatically.
+      $('.ctools-modal-content, #modal-content').height('auto');
+
+      // Position code lifted from http://www.quirksmode.org/viewport/compatibility.html
+      var wt = self.pageYOffset ? self.pageYOffset : document.body.scrollTop;
+
+      // Fix CTools bug: calculate correct 'top' value.
+      var $modal_content = $('#modalContent');
+      var mdcTop = wt + ( $(window).height() / 2 ) - ($modal_content.outerHeight() / 2);
+      $modal_content.css({top: mdcTop + 'px'});
+
+    }
+  }
+
+})(jQuery);
+;/**/
+(function($) {
+
+  Drupal.behaviors.gemalto = {
+    attach: function (context, settings) {
+
+    }
+  }
+
+  // Change label of Video filter Wysiwyg button.
+  $(window).load(function() {
+    $('.mce_video_filter').attr('title', Drupal.t('Insert Video'));
+  });
+
+})(jQuery);
+;/**/
