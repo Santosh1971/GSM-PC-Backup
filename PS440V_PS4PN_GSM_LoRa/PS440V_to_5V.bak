@@ -1,0 +1,513 @@
+EESchema Schematic File Version 4
+LIBS:PS440V_to_5V-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:D_Bridge_+-AA D1
+U 1 1 5CD90C6C
+P 4205 2795
+F 0 "D1" H 4545 2840 50  0000 L CNN
+F 1 "D_Bridge_+-AA" H 4545 2750 50  0000 L CNN
+F 2 "Housings_SSOP:SOP-4_3.8x4.1mm_Pitch2.54mm" H 4205 2795 50  0001 C CNN
+F 3 "~" H 4205 2795 50  0001 C CNN
+	1    4205 2795
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5CD90D63
+P 3235 2730
+F 0 "J1" H 3155 2945 50  0000 C CNN
+F 1 "Conn_01x02" H 3155 2855 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 3235 2730 50  0001 C CNN
+F 3 "~" H 3235 2730 50  0001 C CNN
+	1    3235 2730
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5CD90E5B
+P 5905 3030
+F 0 "C1" H 6020 3075 50  0000 L CNN
+F 1 "C" H 6020 2985 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5943 2880 50  0001 C CNN
+F 3 "~" H 5905 3030 50  0001 C CNN
+	1    5905 3030
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C2
+U 1 1 5CD90F4F
+P 6305 3030
+F 0 "C2" H 6420 3075 50  0000 L CNN
+F 1 "CP1" H 6420 2985 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D10.0mm_P5.00mm" H 6305 3030 50  0001 C CNN
+F 3 "~" H 6305 3030 50  0001 C CNN
+	1    6305 3030
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:KA78M05_TO252 U1
+U 1 1 5CD91045
+P 7085 2740
+F 0 "U1" H 7085 2980 50  0000 C CNN
+F 1 "KA78M05_TO252" H 7085 2890 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:TO-252-2" H 7085 2965 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM78M05.pdf" H 7085 2690 50  0001 C CNN
+	1    7085 2740
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_A J2
+U 1 1 5CD91518
+P 9095 2770
+F 0 "J2" H 8865 2760 50  0000 R CNN
+F 1 "USB_A" H 8865 2670 50  0000 R CNN
+F 2 "_connectors:_Molex-PicoBlade-SMD-4" H 9245 2720 50  0001 C CNN
+F 3 " ~" H 9245 2720 50  0001 C CNN
+	1    9095 2770
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole MH1
+U 1 1 5CD9163C
+P 4940 3570
+F 0 "MH1" H 5040 3615 50  0000 L CNN
+F 1 "MountingHole" H 5040 3525 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_2.2mm_M2" H 4940 3570 50  0001 C CNN
+F 3 "~" H 4940 3570 50  0001 C CNN
+	1    4940 3570
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5CD9170F
+P 8475 3420
+F 0 "D2" V 8511 3302 50  0000 R CNN
+F 1 "LED" V 8421 3302 50  0000 R CNN
+F 2 "LEDs:LED_D5.0mm" H 8475 3420 50  0001 C CNN
+F 3 "~" H 8475 3420 50  0001 C CNN
+	1    8475 3420
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5CD917B4
+P 8470 2940
+F 0 "R1" H 8540 2985 50  0000 L CNN
+F 1 "R" H 8540 2895 50  0000 L CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 8400 2940 50  0001 C CNN
+F 3 "~" H 8470 2940 50  0001 C CNN
+	1    8470 2940
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3435 2730 3580 2730
+Wire Wire Line
+	3580 2730 3580 2335
+Wire Wire Line
+	3580 2335 4205 2335
+Wire Wire Line
+	4205 2335 4205 2495
+Wire Wire Line
+	3435 2830 3580 2830
+Wire Wire Line
+	3580 2830 3580 3275
+Wire Wire Line
+	3580 3275 4205 3275
+Wire Wire Line
+	4205 3275 4205 3095
+Wire Wire Line
+	5905 2795 5905 2880
+Wire Wire Line
+	5905 2795 6305 2795
+Wire Wire Line
+	6305 2795 6305 2880
+Connection ~ 5905 2795
+Wire Wire Line
+	6785 2740 6305 2740
+Wire Wire Line
+	6305 2740 6305 2795
+Connection ~ 6305 2795
+$Comp
+L Device:C C3
+U 1 1 5CD920AE
+P 7580 2995
+F 0 "C3" H 7695 3040 50  0000 L CNN
+F 1 "C" H 7695 2950 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7618 2845 50  0001 C CNN
+F 3 "~" H 7580 2995 50  0001 C CNN
+	1    7580 2995
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C4
+U 1 1 5CD920B4
+P 7980 2995
+F 0 "C4" H 8095 3040 50  0000 L CNN
+F 1 "CP1" H 8095 2950 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D10.0mm_P5.00mm" H 7980 2995 50  0001 C CNN
+F 3 "~" H 7980 2995 50  0001 C CNN
+	1    7980 2995
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5CD9234B
+P 7075 3515
+F 0 "#PWR0101" H 7075 3265 50  0001 C CNN
+F 1 "GND" H 7079 3343 50  0000 C CNN
+F 2 "" H 7075 3515 50  0001 C CNN
+F 3 "" H 7075 3515 50  0001 C CNN
+	1    7075 3515
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3905 2795 3905 3415
+Wire Wire Line
+	3905 3415 5905 3415
+Wire Wire Line
+	5905 3415 5905 3180
+Wire Wire Line
+	5905 3415 6305 3415
+Wire Wire Line
+	6305 3415 6305 3180
+Connection ~ 5905 3415
+Wire Wire Line
+	6305 3415 7075 3415
+Wire Wire Line
+	7085 3415 7085 3040
+Connection ~ 6305 3415
+Wire Wire Line
+	7075 3515 7075 3415
+Connection ~ 7075 3415
+Wire Wire Line
+	7075 3415 7085 3415
+Wire Wire Line
+	7385 2740 7580 2740
+Wire Wire Line
+	7580 2740 7580 2845
+Wire Wire Line
+	7580 2740 7980 2740
+Wire Wire Line
+	7980 2740 7980 2845
+Connection ~ 7580 2740
+Wire Wire Line
+	7580 3145 7580 3415
+Wire Wire Line
+	7580 3415 7085 3415
+Wire Wire Line
+	7980 3145 7980 3415
+Wire Wire Line
+	7980 3415 7580 3415
+Connection ~ 7580 3415
+Wire Wire Line
+	8470 2790 8470 2735
+Wire Wire Line
+	8470 2735 7980 2735
+Wire Wire Line
+	7980 2735 7980 2740
+Connection ~ 7980 2740
+Wire Wire Line
+	8470 3090 8470 3215
+Wire Wire Line
+	8470 3215 8475 3215
+Wire Wire Line
+	8475 3215 8475 3270
+Wire Wire Line
+	7980 3415 8245 3415
+Wire Wire Line
+	8245 3415 8245 3680
+Wire Wire Line
+	8245 3680 8475 3680
+Wire Wire Line
+	8475 3680 8475 3570
+Connection ~ 7980 3415
+Wire Wire Line
+	9195 3170 9195 3275
+Wire Wire Line
+	9195 3275 9150 3275
+Wire Wire Line
+	9095 3275 9095 3170
+Wire Wire Line
+	8475 3680 9150 3680
+Wire Wire Line
+	9150 3680 9150 3275
+Connection ~ 8475 3680
+Connection ~ 9150 3275
+Wire Wire Line
+	9150 3275 9095 3275
+Wire Wire Line
+	8795 2570 8470 2570
+Wire Wire Line
+	8470 2570 8470 2735
+Connection ~ 8470 2735
+$Comp
+L Transistor_Array:ULN2003 U2
+U 1 1 5DC4E68F
+P 7140 4975
+F 0 "U2" H 7140 5640 50  0000 C CNN
+F 1 "ULN2003" H 7140 5550 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16W_5.3x10.2mm_Pitch1.27mm" H 7190 4425 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/uln2003a.pdf" H 7240 4775 50  0001 C CNN
+	1    7140 4975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K1
+U 1 1 5DC4E85B
+P 8890 4450
+F 0 "K1" H 9320 4495 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 9320 4405 50  0000 L CNN
+F 2 "Relays_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 9340 4400 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 8890 4450 50  0001 C CNN
+	1    8890 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K2
+U 1 1 5DC4EA0C
+P 8890 5570
+F 0 "K2" H 9320 5615 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 9320 5525 50  0000 L CNN
+F 2 "Relays_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 9340 5520 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 8890 5570 50  0001 C CNN
+	1    8890 5570
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5DC4EC2C
+P 7140 5680
+F 0 "#PWR0102" H 7140 5430 50  0001 C CNN
+F 1 "GND" H 7144 5508 50  0000 C CNN
+F 2 "" H 7140 5680 50  0001 C CNN
+F 3 "" H 7140 5680 50  0001 C CNN
+	1    7140 5680
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7140 5575 7140 5680
+Wire Wire Line
+	7540 4775 8200 4775
+Wire Wire Line
+	8690 4775 8690 4750
+Wire Wire Line
+	8690 5270 8690 4875
+Wire Wire Line
+	8690 4875 7540 4875
+$Comp
+L power:+12V #PWR0103
+U 1 1 5DC50952
+P 5650 2720
+F 0 "#PWR0103" H 5650 2570 50  0001 C CNN
+F 1 "+12V" H 5664 2893 50  0000 C CNN
+F 2 "" H 5650 2720 50  0001 C CNN
+F 3 "" H 5650 2720 50  0001 C CNN
+	1    5650 2720
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2720 5650 2795
+Wire Wire Line
+	4505 2795 5650 2795
+Connection ~ 5650 2795
+Wire Wire Line
+	5650 2795 5905 2795
+$Comp
+L power:+12V #PWR0104
+U 1 1 5DC5148E
+P 7715 4365
+F 0 "#PWR0104" H 7715 4215 50  0001 C CNN
+F 1 "+12V" H 7729 4538 50  0000 C CNN
+F 2 "" H 7715 4365 50  0001 C CNN
+F 3 "" H 7715 4365 50  0001 C CNN
+	1    7715 4365
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7715 4575 7715 4365
+Wire Wire Line
+	7540 4575 7715 4575
+$Comp
+L power:+12V #PWR0105
+U 1 1 5DC52CFB
+P 8690 4085
+F 0 "#PWR0105" H 8690 3935 50  0001 C CNN
+F 1 "+12V" H 8704 4258 50  0000 C CNN
+F 2 "" H 8690 4085 50  0001 C CNN
+F 3 "" H 8690 4085 50  0001 C CNN
+	1    8690 4085
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8690 4150 8690 4110
+$Comp
+L power:+12V #PWR0106
+U 1 1 5DC5392A
+P 8415 6150
+F 0 "#PWR0106" H 8415 6000 50  0001 C CNN
+F 1 "+12V" H 8429 6323 50  0000 C CNN
+F 2 "" H 8415 6150 50  0001 C CNN
+F 3 "" H 8415 6150 50  0001 C CNN
+	1    8415 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8415 6150 8665 6150
+Wire Wire Line
+	8665 6150 8665 5925
+Wire Wire Line
+	8665 5925 8690 5925
+Wire Wire Line
+	8690 5925 8690 5870
+Wire Wire Line
+	6740 4775 6310 4775
+Wire Wire Line
+	6740 4875 6310 4875
+Wire Wire Line
+	8795 2770 8575 2770
+Wire Wire Line
+	8795 2870 8565 2870
+Text Label 8625 2770 0    50   ~ 0
+CH1
+Text Label 8635 2870 0    50   ~ 0
+CH2
+Text Label 6480 4775 0    50   ~ 0
+CH1
+Text Label 6480 4875 0    50   ~ 0
+CH2
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5DC5890F
+P 10485 4425
+F 0 "J3" H 10405 4640 50  0000 C CNN
+F 1 "Conn_01x02" H 10405 4550 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 10485 4425 50  0001 C CNN
+F 3 "~" H 10485 4425 50  0001 C CNN
+	1    10485 4425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5DC58A12
+P 10515 5590
+F 0 "J4" H 10435 5805 50  0000 C CNN
+F 1 "Conn_01x02" H 10435 5715 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 10515 5590 50  0001 C CNN
+F 3 "~" H 10515 5590 50  0001 C CNN
+	1    10515 5590
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9190 4150 9190 4120
+Wire Wire Line
+	9190 4120 10085 4120
+Wire Wire Line
+	10085 4120 10085 4425
+Wire Wire Line
+	10085 4425 10285 4425
+Wire Wire Line
+	9090 4750 9090 4790
+Wire Wire Line
+	9090 4790 9955 4790
+Wire Wire Line
+	9955 4790 9955 4525
+Wire Wire Line
+	9955 4525 10285 4525
+Wire Wire Line
+	8990 5270 8990 5150
+Wire Wire Line
+	8990 5150 10035 5150
+Wire Wire Line
+	10035 5150 10035 5590
+Wire Wire Line
+	10035 5590 10210 5590
+Wire Wire Line
+	10315 5690 10100 5690
+Wire Wire Line
+	10010 5690 10010 6130
+Wire Wire Line
+	10010 6130 9090 6130
+Wire Wire Line
+	9090 6130 9090 5870
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5DC5E667
+P 10510 6010
+F 0 "J5" H 10430 6225 50  0000 C CNN
+F 1 "Conn_01x02" H 10430 6135 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 10510 6010 50  0001 C CNN
+F 3 "~" H 10510 6010 50  0001 C CNN
+	1    10510 6010
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10310 6010 10210 6010
+Wire Wire Line
+	10210 6010 10210 5590
+Connection ~ 10210 5590
+Wire Wire Line
+	10210 5590 10315 5590
+Wire Wire Line
+	10310 6110 10100 6110
+Wire Wire Line
+	10100 6110 10100 5690
+Connection ~ 10100 5690
+Wire Wire Line
+	10100 5690 10010 5690
+$Comp
+L Device:R R?
+U 1 1 5DEB5533
+P 8200 4570
+F 0 "R?" H 8270 4615 50  0000 L CNN
+F 1 "R" H 8270 4525 50  0000 L CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 8130 4570 50  0001 C CNN
+F 3 "~" H 8200 4570 50  0001 C CNN
+	1    8200 4570
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DEB5A41
+P 8200 4190
+F 0 "D?" V 8236 4072 50  0000 R CNN
+F 1 "LED" V 8146 4072 50  0000 R CNN
+F 2 "LEDs:LED_D5.0mm" H 8200 4190 50  0001 C CNN
+F 3 "~" H 8200 4190 50  0001 C CNN
+	1    8200 4190
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8200 4720 8200 4775
+Connection ~ 8200 4775
+Wire Wire Line
+	8200 4775 8690 4775
+Wire Wire Line
+	8200 4420 8200 4340
+Wire Wire Line
+	8690 4110 8440 4110
+Wire Wire Line
+	8440 4110 8440 3930
+Wire Wire Line
+	8440 3930 8200 3930
+Wire Wire Line
+	8200 3930 8200 4040
+Connection ~ 8690 4110
+Wire Wire Line
+	8690 4110 8690 4085
+Text Notes 7925 3995 0    50   ~ 0
+For RF received indication if Relay is not used
+$EndSCHEMATC
